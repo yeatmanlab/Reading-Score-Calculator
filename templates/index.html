@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no">
+
+        <script>
+            const reactDefaultThemes = {defaultBaseTextSize: '16px',defaultBodyFont: 'Inter',defaultBodyFontWeight: '300',defaultBodyTextColor: '#383B3D',defaultButtonBackgroundColor: '#212121',defaultButtonRoundness: '.5rem',defaultButtonTextColor: '#ffffff',defaultContainerStyle: 'container',defaultTitleFont: 'Inter',defaultTitleFontWeight: '600',defaultTitleTextColor: '#383B3D'};
+        </script>
+
+        <meta name="twitter:title" content="Home"><meta property="twitter:title" content="Home"><meta property="og:title" content="Home">
+
+
+
+
+
+        <link rel="icon" type="image/x-icon" href="https://softr-prod.imgix.net/applications/8f7af9fb-a550-425d-b327-48195c193a5f/assets/c870e998-d79a-414a-8577-5bb4e5b7464d.svg?rnd=1622671497214">
+
+
+        <link rel="canonical" href="https://avery735.preview.softr.app/">
+        <link href="https://fonts.softr-files.com/google/api/css?family=Inter:100,200,300,500,600,600,700,800,900,400&amp;display=swap" rel="stylesheet">
+
+        <link href="https://assets.softr-files.com/libs/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://assets.softr-files.com/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+
+        <style type="text/css">
+
+            html {
+                scroll-behavior: smooth;
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+
+            body {
+              overflow-x: hidden;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            @media (min-width: 576px) {
+                .container {
+                    max-width: 540px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .navbar-brand img {
+                    max-width: 15rem!important;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .container {
+                    max-width: 960px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    max-width: 1140px;
+                }
+            }
+
+            p, h1, h2, h3, h4, h5, small { white-space: pre-line; }
+
+            @media screen and (max-width: 768px) {
+              input, select, textarea {
+                font-size: 16px !important;
+              }
+            }
+
+            h1.sw-font-family-default,
+            h2.sw-font-family-default {
+                font-family: "Inter";
+            }
+
+            h1.sw-font-weight-default,
+            h2.sw-font-weight-default {
+                font-weight: 600;
+            }
+
+            h1.sw-text-color-default,
+            h2.sw-text-color-default {
+                color: #383B3D;
+            }
+
+            section.sw-font-family-default,
+            header.sw-font-family-default,
+            nav.sw-font-family-default,
+            footer.sw-font-family-default,
+            div.sw-font-family-default,
+            span.sw-font-family-default,
+            small.sw-font-family-default,
+            pre.sw-font-family-default,
+            p.sw-font-family-default,
+            b.sw-font-family-default,
+            li.sw-font-family-default,
+            ul.sw-font-family-default,
+            a.sw-font-family-default,
+            h3.sw-font-family-default,
+            h4.sw-font-family-default,
+            h5.sw-font-family-default,
+            h6.sw-font-family-default {
+                font-family: "Inter";
+            }
+
+            span.sw-font-weight-default,
+            li.sw-font-weight-default span,
+            small.sw-font-weight-default,
+            li.sw-font-weight-default small,
+            pre.sw-font-weight-default,
+            p.sw-font-weight-default,
+            h3.sw-font-weight-default,
+            h4.sw-font-weight-default,
+            h5.sw-font-weight-default,
+            h6.sw-font-weight-default {
+                font-weight: 300;
+            }
+
+            span.sw-text-color-default,
+            li.sw-text-color-default span,
+            small.sw-text-color-default,
+            li.sw-text-color-default small,
+            pre.sw-text-color-default,
+            p.sw-text-color-default,
+            div.sw-text-color-default,
+            h3.sw-text-color-default,
+            h4.sw-text-color-default,
+            h5.sw-text-color-default,
+            h6.sw-text-color-default {
+                color: #383B3D;
+            }
+
+            input.sw-font-family-default,
+            textarea.sw-font-family-default {
+                font-family: "Inter";
+            }
+
+            input.sw-font-weight-default,
+            textarea.sw-font-weight-default {
+                font-weight: 300;
+            }
+
+            .sw-font-family-default::-webkit-input-placeholder,
+            .sw-font-family-default::-moz-placeholder,
+            .sw-font-family-default:-ms-input-placeholder,
+            .sw-font-family-default:-moz-placeholder {
+                font-family: "Inter";
+            }
+
+            .sw-font-family-default::-webkit-input-placeholder,
+            .sw-font-family-default::-moz-placeholder,
+            .sw-font-family-default:-ms-input-placeholder,
+            .sw-font-family-default:-moz-placeholder {
+                font-weight: 300;
+            }
+
+            .sw-text-color-default[data-element='button'] {
+                color: #ffffff;
+            }
+
+            .sw-background-color-default[data-element='button'] {
+                background-color: #212121;
+            }
+
+            .sw-border-radius-default[data-element='button'] {
+                border-radius: .5rem;
+            }
+
+            /* Micromodal styles */
+            .sw-modal {
+                display: none;
+            }
+
+            .sw-modal.is-open {
+                display: block;
+            }
+
+            .sw-modal .sw-modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+            }
+
+            .sw-modal .sw-modal-container {
+                background-color: #FFFFFF;
+                padding: 40px 10px 10px 10px;
+                overflow-y: auto;
+                box-sizing: border-box;
+                position: relative;
+                margin: auto;
+            }
+
+            .sw-modal #sw-modal-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sw-modal .sw-modal-close {
+                background: transparent;
+                border: 0;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
+
+            .sw-modal-close:focus {
+                outline: none;
+            }
+
+            .sw-modal .sw-modal-iframe {
+                border: none;
+            }
+
+            .sw-modal-size-sm {
+                width: 464px;
+                height: 350px;
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+
+            .sw-modal-size-md {
+                width: 755px;
+                height: 600px;
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .sw-modal-size-lg {
+                width: 1196px;
+                height: 780px;
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .sw-modal-size-xl {
+                width: 95vw;
+                height: 95vh;
+            }
+
+            .sw-modal-container > div, #sw-modal-content, #sw-modal-content iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .sw-modal-close:before {
+                content: "\2715";
+            }
+
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+
+            .sw-font-size-m { font-size: 1rem!important; } .sw-text-color-default {  } .sw-font-family-default {  } .sw-font-weight-semibold { font-weight: 600!important; } .sw-border-radius-full { border-radius: 9999rem!important; } .sw-background-color-default {  } .sw-padding-left-s { padding-left: 2.5rem!important; } .sw-padding-right-s { padding-right: 2.5rem!important; } .sw-padding-top-5xs { padding-top: 0.75rem!important; } .sw-padding-bottom-5xs { padding-bottom: 0.75rem!important; } .sw-border-style-none { border-style: none!important; } .sw-border-width-xs { border-width: 1px!important; } .sw-border-color-000000 { border-color: #000000!important; } .sw-letter-spacing-normal { letter-spacing: 0rem!important; } .sw-text-decoration-no-underline { text-decoration: none!important; } @media (hover: hover) { .hover\:sw-text-decoration-no-underline:hover { text-decoration: none!important; } } @media (hover: hover) { .hover\:sw-box-shadow-m:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)!important; } } .sw-margin-bottom-6xs { margin-bottom: 0.5rem!important; } .sw-margin-right-5xs { margin-right: 0.75rem!important; } .sw-display-inline-block { display: inline-block!important; } .sw-background-color-ffffff { background-color: #ffffff!important; } .sw-padding-top-2xl { padding-top: 6rem!important; } .sw-padding-bottom-2xl { padding-bottom: 6rem!important; } .sw-border-top-style-none { border-top-style: none!important; } .sw-border-top-width-xs { border-top-width: 1px!important; } .sw-border-top-color-000000 { border-top-color: #000000!important; } .sw-border-bottom-style-none { border-bottom-style: none!important; } .sw-border-bottom-width-xs { border-bottom-width: 1px!important; } .sw-border-bottom-color-000000 { border-bottom-color: #000000!important; } .sw-font-size-4xl { font-size: 2.25rem!important; } .sw-font-weight-default {  } .sw-padding-top-none { padding-top: 0rem!important; } .sw-padding-bottom-4xs { padding-bottom: 1rem!important; } .sw-line-height-normal { line-height: 1.5!important; } .sw-font-size-xl { font-size: 1.25rem!important; } .sw-padding-bottom-3xs { padding-bottom: 1.25rem!important; } .sw-border-radius-l { border-radius: 0.5rem!important; } .sw-background-color-212121 { background-color: #212121!important; } .sw-percentage-width-full { width: 100%!important; } .sw-border-radius-none { border-radius: 0rem!important; } .sw-background-repeat-no-repeat { background-repeat: no-repeat!important; } .sw-background-size-cover { background-size: cover!important; } .sw-background-position-center { background-position: center!important; } .sw-background-attachment-scroll { background-attachment: scroll!important; }
+
+        </style>
+
+        <link href="https://fonts.softr-files.com/google/api/css?family=Nunito+Sans:600&amp;display=swap" rel="stylesheet">
+        <style>
+            .made-with-softr {
+              position: fixed;
+              z-index: 9999999;
+              left: 20px;
+              bottom: 20px;
+            }
+
+            .made-with-softr a {
+              width: 125px;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 19px;
+              box-shadow: 0 0 4px rgb(0 0 0 / 15%);
+              border-radius: 4px;
+              z-index: 9999999;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 6px 8px;
+              color: #1f2b3f;
+              background: #ffffff;
+              box-sizing: content-box;
+              text-decoration: none;
+              font-family: 'Nunito Sans', sans-serif;
+            }
+            .made-with-softr a .made-with {
+              margin-left: 2px;
+            }
+
+            .made-with-softr a img {
+                width: 16px;
+            }
+
+            .made-with-softr .softr-word {
+              color: #3b85db;
+            }
+
+            .made-with-softr .dark-theme {
+              color: #ffffff;
+              background: #1f2b3f;
+            }
+
+            .made-with-softr .dark-theme .softr-word {
+              color: #ffb30b;
+            }
+
+            .template {
+                height: 50px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                z-index: 2000;
+                color: #212121;
+                background: #ffffff;
+                display: flex;
+            }
+
+            .template-dark-theme {
+                background: #1f2b3f;
+                color: #ffffff;
+            }
+
+            .template-header-softr-logo {
+                margin-top: 12px;
+            }
+
+            .template-header-softr-logo a img {
+                max-height: 20px;
+                content: url('/assets/images/softr-title-logo.svg');
+            }
+
+            .template-header-softr-logo a {
+                font-style: normal;
+                font-size: 16px;
+                line-height: 24px;
+                justify-content: space-between;
+                align-items: center;
+                padding: 6px 8px;
+                box-sizing: content-box;
+                text-decoration: none;
+            }
+
+            .template-dark-theme .template-header-softr-logo a img {
+                content: url('/assets/images/softr-title-logo-light.svg');
+            }
+
+            .template-header-vertical-divider {
+                border-left: 1px solid #E5E5EA;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
+
+            .template-dark-theme .template-header-vertical-divider {
+                border-left: 1px solid #493550;
+            }
+
+            .template-label {
+                width: 58px;
+                height: 20px;
+                background-color: #EDEDED;
+                border-radius: 4px;
+                align-items: center;
+                justify-content: center;
+                margin-left: 20px;
+                font-size: 8px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-top: 15px;
+                display: flex;
+                color: #383B3D;
+            }
+
+            .template-dark-theme .template-label {
+                background-color: #493550;
+                color: #F5F5F7;
+            }
+
+            .use-template a {
+                width: 115px;
+                height: 32px;
+                background-color: #28192D;
+                border-radius: 4px;
+                align-items: center;
+                justify-content: center;
+                margin-left: 36px;
+                font-size: 13px;
+                font-weight: 500;
+                font-style: normal;
+                margin-top: 9px;
+                display: flex;
+                flex-direction: row;
+                color: #FFFFFF;
+                box-sizing: content-box;
+                text-decoration: none;
+            }
+
+            .template-dark-theme .use-template a {
+                background-color: #F5F5F7;
+                color: #212121;
+            }
+
+            .margin-top-12 {
+                margin-top: 12px;
+            }
+
+            .margin-top-50 {
+                margin-top: 50px;
+            }
+
+            .display-flex {
+                display: flex;
+            }
+        </style>
+
+    <!-- App Integrations -->
+
+    <!-- End Integrations -->
+
+
+
+        <script>window['application_context'] = {}; window['application_context']['policies'] ={"numberOfSupportedCollaborators":5,"numberOfSupportedDomains":1,"isSoftrBrandingVisible":true,"numberOfDatasourceRecordsPerTable":1000,"numberOfInternalUsers":5,"numberOfExternalUsers":100,"supportedNumberOfMembershipUsers":100,"hasSignInWithEmailCode":false,"hasSignInWithSMSCode":false,"hasGoogleAuthenticationSupport":true,"hasSamlAuthenticationSupport":false,"hasOpenIdAuthenticationSupport":false,"hasUserLastSeenSupport":false,"hasMapSupport":true,"hasTableSupport":true,"hasCalendarSupport":false,"hasInboxBlockSupport":false,"hasKanbanSupport":false,"hasChartsSupport":false,"hasOrgChartBlockSupport":false,"hasTimelineBlockSupport":false,"numberOfDaysApplicationHistory":7,"hasCustomCodeSupport":false,"hasEmbedBlockSupport":false,"hasTransferApplicationsAcrossWorkspace":false,"hasPwaSupport":true,"hasTransferOwnershipSupport":null,"hasEditAirtableRecordsSupport":false,"hasMultiGroupEditAirtableRecordsSupport":false}; </script>
+
+    <!-- App Custom Header Code -->
+        <style>
+ .sw-font-size-5xl {
+    font-size: 3rem;
+  }
+  .sw-font-size-4xl {
+    font-size: 2.25rem;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if($(window).width() < 768) {
+       $('h1.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('h1.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('h2.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('h2.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('div.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('div.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('p.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('p.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+       $('span.sw-font-size-10xl').removeClass('sw-font-size-10xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-9xl').removeClass('sw-font-size-9xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-8xl').removeClass('sw-font-size-8xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-7xl').removeClass('sw-font-size-7xl').addClass('sw-font-size-5xl');
+       $('span.sw-font-size-6xl').removeClass('sw-font-size-6xl').addClass('sw-font-size-4xl');
+    }
+  });
+</script>
+    <!-- End App Custom Header Code -->
+
+    <!-- Page Custom Header Code -->
+
+    <!-- End Page Custom Header Code -->
+
+        <script>window['is401Page'] = false; </script>
+
+
+        <script>
+            /** Image lineup on mobile **/
+            document.addEventListener("DOMContentLoaded", function() {
+                function changeImageDirectionsOnMobile() {
+
+                    const classListSection = $('body>div>section')?.attr('class')?.split(/\s+/);
+                    const textClassSection = classListSection?.find(cls => cls.startsWith('feature'));
+
+                    const classListHeader = $('body>div>header')?.attr('class')?.split(/\s+/);
+                    const textClassHeader = classListHeader?.find(cls => cls.startsWith('hero'));
+
+                    /*If FEATURE block*/
+                    if (textClassSection) {
+                        findRowsWidthImageAndReverse(textClassSection)
+                    }
+
+                    /*If HERO block*/
+                    if (textClassHeader) {
+                        findRowsWidthImageAndReverse(textClassHeader)
+                    }
+                }
+
+                function findRowsWidthImageAndReverse(textClass) {
+                    const rowsWithImages = $('.' + textClass + ' .row.align-items-center').has('img').toArray();
+                    const rowsWithLeftSideImages = rowsWithImages.filter(row => {
+                        return $(row).children().first().children().first().prop("tagName") === 'IMG';
+                    });
+
+
+                    rowsWithLeftSideImages.forEach(row => {
+                        if ($(window).width() <= 768) {
+                            row.classList.add('flex-column-reverse')
+                        }
+                    });
+                }
+
+                if ($(window).width() <= 768) {
+                    changeImageDirectionsOnMobile();
+                }
+            });
+
+            /** BG Size on mobile **/
+            document.addEventListener("DOMContentLoaded", function() {
+                if($(window).width() <= 768) {
+                    var element = $('section.sw-background-size-auto, header.sw-background-size-auto');
+                    element.removeClass('sw-background-size-auto');
+                    element.css('background-size', 'cover');
+
+                    $('section.sw-background-attachment-fixed, header.sw-background-attachment-fixed').removeClass('sw-background-attachment-fixed');
+                }
+            });
+
+            /** Disable zoom on mobile **/
+            document.addEventListener("DOMContentLoaded", function() {
+               if($(window).width() <= 768) {
+                   $('input.sw-font-size-s').removeClass('sw-font-size-s');
+                   $('textarea.sw-font-size-s').removeClass('sw-font-size-s');
+                   $('select.sw-font-size-s').removeClass('sw-font-size-s');
+               }
+           });
+
+        </script>
+    </head>
+
+    <body>
+
+        <div data-appid="32a8995b-540a-4e6e-9df1-6f866e9e82f8" data-pageid="6429b58b-bea8-4f71-8d4d-f80c1fb4fa35" data-workspaceid="87ec597f-4e6c-497b-bf2d-d00248a7af36" data-paymentplan="" class="content"><header id="hero1" data-block-version="2.0.1" data-block-id="b167f682-a62b-4060-8962-58c49d93ec69" data-block-updated="2022-08-31T17:23:37.145" style="" class="hero1-b167f682-a62b-4060-8962-58c49d93ec69 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">  <div class="container">             <div class="row align-items-center">    <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">     <h1 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">      BDE Lab Raw Score Convertor     </h1>          <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal ">      This web application takes in a .csv with raw scores and converts that into a .csv into standard scores and percentiles that you can easily upload into REDCap.     </p>          <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
+                <form method="post" enctype="multipart/form-data">
+                <label for="file-upload" class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-212121 sw-padding-left-s sw-padding-right-s sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" style="color: white;">
+                Select scoreinput.csv file
+                </label>
+                    <input id="file-upload" type="file" name="file" style="display: none;">
+                     <input class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-212121 sw-padding-left-s sw-padding-right-s sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" style="color: white;" type="submit" value="Upload">
+
+                </form>
+
+        </div>    </div>     <div class="col-lg-7 text-center">                  <img src="https://softr-assets-eu-shared.s3.eu-central-1.amazonaws.com/illustrations/rosa/guy-with-charts.svg" class="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block" alt="Image alt">               </div>   </div>              </div> </header> </div>
+
+
+            <script>
+                (() => {
+                  function rgb2hex(orig) {
+                    var rgb = orig.replace(/\s/g, "").match(/^rgba?\((\d+),(\d+),(\d+)/i);
+                    return rgb && rgb.length === 4
+                      ? "#" +
+                          ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
+                          ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
+                          ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2)
+                      : orig;
+                  }
+
+                  function lightOrDark(color) {
+                    // Variables for red, green, blue values
+                    var r, g, b, hsp;
+
+                    // Check the format of the color, HEX or RGB?
+                    if (color.match(/^rgb/)) {
+                      // If RGB --> store the red, green, blue values in separate variables
+                      color = color.match(
+                        /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/
+                      );
+
+                      r = color[1];
+                      g = color[2];
+                      b = color[3];
+                    } else {
+                      // If hex --> Convert it to RGB: http://gist.github.com/983661
+                      color = +(
+                        "0x" + color.slice(1).replace(color.length < 5 && /./g, "$&$&")
+                      );
+
+                      r = color >> 16;
+                      g = (color >> 8) & 255;
+                      b = color & 255;
+                    }
+
+                    // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+                    hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b));
+
+                    // Using the HSP value, determine whether the color is light or dark
+                    if (hsp > 127.5) {
+                      return "light";
+                    } else {
+                      return "dark";
+                    }
+                  }
+
+                  function createBudgetWrapperDivEl() {
+                    const divEl = document.createElement("div");
+                    divEl.setAttribute("class", "made-with-softr");
+
+                    divEl.style.setProperty('display', 'block', 'important');
+                    divEl.style.setProperty('opacity', '1', 'important');
+                    divEl.style.setProperty('visibility', 'visible', 'important');
+
+
+                    document.body.appendChild(divEl);
+                  }
+
+                  function isInCurrentSection(elTop, elBottom) {
+                    const innerHeight = window.innerHeight - 30;
+                    return elTop < innerHeight && elBottom > innerHeight;
+                  }
+
+                  function setRightThemeForTemplate() {
+                      if (!document.querySelector(".template")) {
+                          return;
+                      }
+                      // if header is horizontal and pinned, consider only it
+                      // check vertical header as well
+                      const elements = document.querySelectorAll('body > .content > *');
+
+                      if (elements && elements.length && elements[0].getBoundingClientRect().top == 50) {
+                          updateTemplateTheme(elements[0]);
+                          return;
+                      }
+
+                      elements.forEach(item => {
+                          const elementTop = item.getBoundingClientRect().top;
+                          const elementBottom = item.getBoundingClientRect().bottom;
+
+                          if(elementTop < 25 && elementBottom > 25) {
+                              updateTemplateTheme(item);
+                          }
+                      });
+                  }
+
+                  function updateTemplateTheme(item) {
+                      let documentBodyColor = window
+                          .getComputedStyle(item)
+                          .getPropertyValue("background-color");
+
+                      if (documentBodyColor.replace(/\s/g, "").match(/^rgba?\((\d+),(\d+),(\d+),0\)/i) && item.firstChild) {
+                          if (item.firstChild instanceof  Element) {
+                              documentBodyColor = window
+                                  .getComputedStyle(item.firstChild)
+                                  .getPropertyValue("background-color");
+                          }
+                      }
+                      const bgColor = lightOrDark(rgb2hex(documentBodyColor));
+
+                      const templateHeader = document.querySelector(".template");
+                      if (bgColor === "light") {
+                          templateHeader.classList.add("template-dark-theme");
+                      } else {
+                          templateHeader.classList.remove("template-dark-theme");
+                      }
+                  }
+
+                  function setRightTheme(sections, softrEl) {
+                    sections.forEach(item => {
+                      const elementTop = item.getBoundingClientRect().top;
+                      const elementBottom = item.getBoundingClientRect().bottom;
+
+                      if (isInCurrentSection(elementTop, elementBottom)) {
+                        const documentBodyColor = window
+                          .getComputedStyle(item)
+                          .getPropertyValue("background-color");
+
+                        const bgColor = lightOrDark(rgb2hex(documentBodyColor));
+
+                        if (bgColor === "light") {
+                          softrEl.classList.add("dark-theme");
+                        } else {
+                          softrEl.classList.remove("dark-theme");
+                        }
+                      }
+                    });
+                  }
+
+                  function isHidden(el) {
+                    if(!el) {
+                        return true;
+                    }
+                    const style = window.getComputedStyle(el);
+                    return (style.display === 'none');
+                  }
+
+                  function init() {
+	                  const madeWithSoftrEl = document.querySelector(".made-with-softr");
+	                  const softrEl = document.querySelector(".made-with-softr a");
+
+	                  if (!madeWithSoftrEl) {
+		                  createBudgetWrapperDivEl();
+	                  }
+
+	                  if (!softrEl && madeWithSoftrEl) {
+		                  madeWithSoftrEl.remove();
+		                  createBudgetWrapperDivEl();
+	                  }
+
+	                  if (isHidden(madeWithSoftrEl) || isHidden(softrEl)) {
+		                  madeWithSoftrEl.remove();
+		                  createBudgetWrapperDivEl();
+	                  }
+
+	                  const headers = document.querySelectorAll("header");
+	                  const sections = document.querySelectorAll("section");
+	                  const footers = document.querySelectorAll("footer");
+	                  const allSections = [...headers, ...sections, ...footers];
+	                  setRightTheme(allSections, softrEl);
+                      setRightThemeForTemplate();
+
+	                  document.addEventListener("scroll", () => {
+		                  setRightTheme(allSections, softrEl);
+                          setRightThemeForTemplate();
+	                  });
+                  }
+
+	                function removeLogoWithSoftr() {
+		                if (location.origin === 'https://www.softr.io') {
+			                if (document.body.clientWidth <= 576) {
+			                  /* Disable for now we need better solution */
+				              /*  document.getElementsByClassName('made-with-softr')[0].style.display = 'none'; */
+			                }
+		                }
+	                }
+	                init();
+	                removeLogoWithSoftr();
+	                setInterval(() => {
+		                init();
+		                removeLogoWithSoftr();
+	                }, (Math.floor(2 + Math.random() * 5)) * 1000);
+                })();
+            </script>
+
+        <!-- Scripts -->
+        <script src="https://assets.softr-files.com/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://assets.softr-files.com/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://assets.softr-files.com/libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://assets.softr-files.com/libs/micromodal/0.4.10/micromodal.min.js"></script>
+
+        <script>
+            /** Bugfix on multiple ?recordId= issue **/
+            setInterval(function() {
+                $('section a').each(function() {
+                    const href = $(this).attr('href');
+                    if(href && href.includes('?recordId=')) {
+                        const countOfRecords = (href.match(/\?recordId=/g) || []).length;
+                        if(countOfRecords > 1) {
+                            const index = href.lastIndexOf('?recordId=');
+                            const cleanedHref = href.substring(0, index);
+                            $(this).attr('href', cleanedHref);
+                        }
+                    }
+                });
+            }, 1000);
+        </script>
+
+        <script type="text/javascript">
+            if(window.jQuery && window.jQuery.ajaxSetup) {
+                window.jQuery.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if(settings && settings.url && (
+                        settings.url.includes('/integrations/airtable/')
+                        || settings.url.includes('/v1/applications/32a8995b-540a-4e6e-9df1-6f866e9e82f8')
+                        || settings.url.includes('/v1/comments')
+                        || settings.url.includes('/forms/form-to-email'))
+                        ){
+                            xhr.setRequestHeader('softr-page-id', '6429b58b-bea8-4f71-8d4d-f80c1fb4fa35');
+                        }
+                    }
+                });
+            }
+
+            window['hero1'] = {};
+
+        </script>
+
+    <!-- Page Custom Footer Code -->
+
+    <!-- End Page Custom Footer Code -->
+
+    <!-- App Custom Footer Code -->
+
+    <!-- End App Custom Footer Code -->
+
+        <script src="https://assets.softr-files.com/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.min.js" crossorigin="anonymous"></script>
+
+        <script>
+          /** this function is called from list blocks (do not delete) **/
+          function openSwModal(url, size) {
+            MicroModal.init({
+              disableScroll: true,
+              awaitOpenAnimation: true,
+              awaitCloseAnimation: true
+            });
+
+            MicroModal.show("sw-modal");
+
+            const modalElem = document.querySelector('#sw-modal-content');
+            let loadingElem = modalElem.querySelector('.sw-modal-loading');
+
+            if (!loadingElem) {
+              modalElem.innerHTML += `<i class="sw-modal-loading fas fa-sync"></i>`;
+              loadingElem = modalElem.querySelector('.sw-modal-loading');
+              loadingElem.style.animation = 'rotation 900ms infinite linear';
+              loadingElem.style.position = 'absolute';
+            }
+
+            const iframeElem = document.querySelector(".sw-modal-iframe");
+            const modalContainer = document.querySelector(".sw-modal-container");
+
+            iframeElem.onload = function () {
+              loadingElem?.remove();
+            };
+
+            const viewModeParam = "viewMode=modal";
+            const modalUrl = (url.indexOf("?") !== -1) ? url + "&" + viewModeParam : url + "?" + viewModeParam;
+            iframeElem.setAttribute("src", modalUrl);
+
+            modalContainer.classList.remove('sw-modal-size-sm','sw-modal-size-md','sw-modal-size-lg', 'sw-modal-size-xl');
+            modalContainer.classList.add('sw-modal-size-' + size);
+          }
+        </script>
+
+        <!-- Localhost -->
+        <script type="text/javascript">
+            if(window.location.hostname === 'localhost') {
+                if(getUrlParam('domain')) {
+                    setCookie('serverName', getUrlParam('domain'), 30);
+                }
+            }
+            function setCookie(name, value, days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/;" + "SameSite=None; Secure";
+            }
+            function getUrlParam(name) {
+               const url = new URL(window.location.href);
+               let param;
+               for (var key of url.searchParams.keys()) {
+                 if (key.toLowerCase() === name.toLowerCase()) {
+                   param = url.searchParams.get(name);
+                   break;
+                 }
+               }
+               return param;
+            }
+        </script>
+
+        <!-- Modal HTML -->
+        <div id="sw-modal" class="sw-modal" aria-hidden="true">
+            <div class="sw-modal-overlay" data-micromodal-close="">
+                <div tabindex="-1" class="sw-modal-container">
+                    <div role="dialog" aria-modal="true" aria-labelledby="micromodal-title">
+                        <button aria-label="Close modal" class="sw-modal-close" onclick="MicroModal.close('sw-modal')"></button>
+                        <div id="sw-modal-content">
+                            <iframe class="sw-modal-iframe"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--move fixed header under template bar if needed-->
+
+        <!--Scroll to section-->
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                $('a').each(function (index, el) {
+                    let href = $(el).attr('href');
+                    let path = cleanSlugFromPath(location.pathname);
+                    if (href && href.startsWith(path + '#')) {
+                        const scrollTo = href.split('#')[1];
+                        $(this).attr('href', '#' + scrollTo);
+                    }
+                });
+
+                function cleanSlugFromPath(pagePath) {
+                    if (pagePath.includes("/r/rec")) {
+                        pagePath = pagePath.substring(0, pagePath.indexOf("/r/rec"));
+                        pagePath = pagePath.substring(0, pagePath.lastIndexOf("/"));
+                    }
+
+                    return pagePath + (pagePath.endsWith('/') ? '' : '/');
+                }
+            });
+
+        </script>
+
+
+
+
+
+
+
+
