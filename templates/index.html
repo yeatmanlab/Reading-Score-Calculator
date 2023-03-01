@@ -562,8 +562,11 @@
 
     <body>
 
-        <div data-appid="32a8995b-540a-4e6e-9df1-6f866e9e82f8" data-pageid="6429b58b-bea8-4f71-8d4d-f80c1fb4fa35" data-workspaceid="87ec597f-4e6c-497b-bf2d-d00248a7af36" data-paymentplan="" class="content"><header id="hero1" data-block-version="2.0.1" data-block-id="b167f682-a62b-4060-8962-58c49d93ec69" data-block-updated="2022-08-31T17:23:37.145" style="" class="hero1-b167f682-a62b-4060-8962-58c49d93ec69 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">  <div class="container">             <div class="row align-items-center">    <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">     <h1 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">      BDE Lab Raw Score Convertor     </h1>          <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal ">      This web application takes in a .csv with raw scores and converts that into a .csv into standard scores and percentiles that you can easily upload into REDCap.     </p>          <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
-                <form method="post" enctype="multipart/form-data">
+
+
+        <div data-appid="32a8995b-540a-4e6e-9df1-6f866e9e82f8" data-pageid="6429b58b-bea8-4f71-8d4d-f80c1fb4fa35" data-workspaceid="87ec597f-4e6c-497b-bf2d-d00248a7af36" data-paymentplan="" class="content"><header id="hero1" data-block-version="2.0.1" data-block-id="b167f682-a62b-4060-8962-58c49d93ec69" data-block-updated="2022-08-31T17:23:37.145" style="" class="hero1-b167f682-a62b-4060-8962-58c49d93ec69 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-000000 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-000000  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">  <div class="container">             <div class="row align-items-center">    <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">     <h1 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">      BDE Lab Raw Score Convertor     </h1>
+        <br><h3> Double check your input .csv before generating output scores! </h3><br>
+        <form method="post" enctype="multipart/form-data">
                 <label for="file-upload" class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-212121 sw-padding-left-s sw-padding-right-s sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" style="color: white;">
                 Select scoreinput.csv file
                 </label>
@@ -571,6 +574,21 @@
                      <input class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-212121 sw-padding-left-s sw-padding-right-s sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" style="color: white;" type="submit" value="Upload">
 
                 </form>
+
+        <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs sw-letter-spacing-normal sw-line-height-normal ">
+        This is a web application that can calculate scores from various reading assessments based on raw input .csv files.<br>
+        Please enter the participant's age in years and months at the time of testing. This information can be found in REDCap when you prep the run sheet. <br>
+        For example, if the participant is 11 years and 0 months old at the time of testing then enter "11" in Age (Years) and "0" in Age (Months). It's important to enter the participant's age at the time of testing because it's used to calculate their scores!<br>
+        It currently supports the following assessments:
+
+        <li>TOWRE SWE</li>
+        <li>TOWRE PDE</li>
+        <li>CTOPP MFD</li>
+        <li>CTOPP RDN</li>
+        <li>CTOPP RLN</li>
+
+        </p>          <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
+
 
         </div>    </div>     <div class="col-lg-7 text-center">                  <img src="https://softr-assets-eu-shared.s3.eu-central-1.amazonaws.com/illustrations/rosa/guy-with-charts.svg" class="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-000000 sw-border-radius-none  mx-auto d-block" alt="Image alt">               </div>   </div>              </div> </header> </div>
 
