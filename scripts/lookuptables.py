@@ -77,8 +77,14 @@ def towre_lookup(input_df, output_merged):
             towreSWElookup = "TOWRE.swe.17"
             towrePDElookup = "TOWRE.pde.17"
 
-        output_merged.twre_swe_ss[x] = towre_swe_lt.loc[input_df.twre_swe_raw[x]][towreSWElookup]
-        output_merged.twre_pde_ss[x] = towre_pde_lt.loc[input_df.twre_pde_raw[x]][towrePDElookup]
+
+        # TODO: Update the code to account for invalidated scores. In REDCap, scorers will enter Xs in the field if the scores are invalidated. I would RCs/RAs to be able to enter “X” into the input.csv and have Xs outputted for the corresponding output fields. For example, entering “X” for the Memory for Digits raw score (MFD) would also output “X” for the MFD standard score and percentile.
+        if (input_df.twre_swe_raw[x] == "X") or (input_df.twre_pde_raw[x] == "X"):
+            output_merged.twre_swe_ss[x] = "X"
+            output_merged.twre_pde_ss[x] = "X"
+        else:
+            output_merged.twre_swe_ss[x] = towre_swe_lt.loc[input_df.twre_swe_raw[x]][towreSWElookup]
+            output_merged.twre_pde_ss[x] = towre_pde_lt.loc[input_df.twre_pde_raw[x]][towrePDElookup]
 
     # look up towre sum, index & percentile rank
         if (output_merged.twre_swe_ss[x] != "X") & (output_merged.twre_pde_ss[x] != "X"):
@@ -91,7 +97,7 @@ def towre_lookup(input_df, output_merged):
 
         else:
 
-            if (input_df.twre_swe_raw[x] == "N/A"):
+            if (input_df.twre_swe_raw[x] == "X"):
                 output_merged.twre_swe_raw[x] = "X"
                 output_merged.twre_swe_perc[x] = "X"
 
