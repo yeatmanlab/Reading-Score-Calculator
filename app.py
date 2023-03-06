@@ -1,10 +1,18 @@
-from flask import Flask, request, send_file, render_template
+from flask import Flask, request, send_file, render_template, send_from_directory
 from importScores import importScores
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='templates',
+            template_folder='templates')
+
 
 @app.route('/', methods=['GET', 'POST'])
+def render():
+    return render_template('index.html')
+
+@app.route('/Scoring.html', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         # Get the uploaded file
@@ -19,4 +27,4 @@ def upload_file():
 
         # Export the new file to the user
         return send_file('output.csv', as_attachment=True)
-    return render_template('index.html')
+    return render_template('Scoring.html')
