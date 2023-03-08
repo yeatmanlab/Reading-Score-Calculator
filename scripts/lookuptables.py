@@ -252,6 +252,12 @@ def ctopp_lookup(input_df, output_merged):
         output_merged.ctopp_rl_ss[x] = ctopp_rln_lt.loc[input_df.ctopp_rl_raw[x]][ctoppRLNsslookup]
         output_merged.ctopp_rl_perc[x] = ctopp_rln_lt.loc[input_df.ctopp_rl_raw[x]][ctoppRLNplookup]
 
+    # invalidate scores if the input is "X"
+    if (input_df.ctopp_md_raw[x] == "X") or (input_df.ctopp_rd_raw[x] == "X") or (input_df.ctopp_rl_raw[x] == "X"):
+        output_merged.ctopp_rd_ss[x] = "X"
+        output_merged.ctopp_rl_ss[x] = "X"
+        output_merged.ctopp_md_ss[x] = "X"
+
     # look up ctopp rsn composite score & percentile
         if (output_merged.ctopp_rd_ss[x] != "X") & (output_merged.ctopp_rl_ss[x] != "X"):
             ctoppSum = int(output_merged.ctopp_rd_ss[x]) + int(output_merged.ctopp_rl_ss[x])
