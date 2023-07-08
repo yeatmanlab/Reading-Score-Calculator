@@ -4,6 +4,11 @@ The Reading Score Calculator is a web application that calculates reading scores
 ## About
 This web application takes raw assessment data as input and calculates reading scores based on the provided data. It leverages percentile ranges specific to each standardized reading assessment to determine the corresponding reading score.
 
+## Images
+![image](https://github.com/yeatmanlab/Reading-Score-Calculator/assets/106504264/a6511ea5-3ce3-404f-85b2-9d43c2e4e7e4)
+![image](https://github.com/yeatmanlab/Reading-Score-Calculator/assets/106504264/f9f60d1d-acce-49d6-874f-4e6118d6dd4a)
+![image](https://github.com/yeatmanlab/Reading-Score-Calculator/assets/106504264/350ef784-c53a-430b-a857-3ac8d252ce17)
+
 ## Usage
 To use the Reading Score Calculator, follow these steps:
 * Install the required dependencies by running the following command:
